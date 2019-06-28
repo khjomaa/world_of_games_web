@@ -4,6 +4,21 @@
 ### How To Run Locally
 1. ```git clone https://github.com/khjomaa/world_of_games_web.git```
 2. ```cd world_of_games_web```
+3. Set the following environment variables
+    - **Mac**
+        - ```export ENV=DEVELOPMENT```
+        - ```export SECRET_KEY=my_secret_key```
+        - ```export DB_USERNAME=user```
+        - ```export DB_PASSWORD=user123```
+        - ```export DB_HOST=localhost```
+        - ```export DATABASE_NAME=wog```
+    - **Windows**
+        - ```set ENV=DEVELOPMENT```
+        - ```set SECRET_KEY=my_secret_key```
+        - ```set DB_USERNAME=user```
+        - ```set DB_PASSWORD=user123```
+        - ```set DB_HOST=localhost```
+        - ```set DATABASE_NAME=wog```
 2. ```docker-compuse up -d```
 3. App URL: [0.0.0.0:8777](http://0.0.0.0:8777)
 
