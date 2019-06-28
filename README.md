@@ -19,6 +19,8 @@
         - ```set DB_PASSWORD=user123```
         - ```set DB_HOST=localhost```
         - ```set DATABASE_NAME=wog```
+5. Start MySQL container by running the command:
+    - ```docker run --name db -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=wog -e MYSQL_USER=user -e MYSQL_PASSWORD=user123 -p 3306:3306 -d mysql:5.7``` 
 4. ```pip install -r requirements.txt```
 5. ```python manage.py db init```
 6. ```python manage.py db migrate```
