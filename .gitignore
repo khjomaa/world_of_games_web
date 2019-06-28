@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+
+# IntelliJIdea
+.idea
+*.iml
+
+# Application Files
+set_env.sh
+unset_env.sh
+migrations/
+flask-db/
+web_drivers/

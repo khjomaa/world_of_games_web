@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="game">
+    <div id="game">
+        <h1>World Of Games</h1>
+    </div>
+</div>
+
+<hr>
+
+<div class="welcome_message">
+    <div id="welcome_message">
+        <h2> Hello <span id="player-name">{{ name }}</span> and welcome to the World Of Games</h2>
+        <h2> Here you can find many cool games to play </h2>
+    </div>
+</div>
+
+<div class="games_list">
+    <form method="POST" >
+        {{ form.hidden_tag() }}
+
+        {{ form.games.label }}
+        <br>
+        {% for ch in form.games %}
+        {{ ch }} {{ ch.label }}
+        <br>
+        {% endfor %}
+
+        <br>
+        {{ form.difficulty.label }} {{ form.difficulty }}
+
+        <br><br>
+        <div class="form-group row">
+            <div style="padding-left: 50%">
+                {% if score > 0 %}
+                {{ form.save(class="btn btn-lg btn-success") }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.play(class="btn btn-lg btn-success") }}
+            </div>
+        </div>
+
+
+    </form>
+</div>
+{% endblock content %}

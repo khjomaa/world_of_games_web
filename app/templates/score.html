@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="game">
+    <div id="game">
+        <h1>World Of Games</h1>
+    </div>
+</div>
+
+<hr>
+
+<div class="welcome_message">
+    <div id="welcome_message">
+        <h2>Your score is</h2>
+        <h2 id="score">{{ score }}</h2>
+
+        <form action="" method="POST">
+            <div class="form-group">
+                <button
+                        type="submit"
+                        name="submit_button"
+                        value="save_and_quit"
+                        class="btn btn-lg btn-success"
+                        style="margin-top:100px">
+                    Save And Quit
+                </button>
+
+                <button
+                        type="submit"
+                        name="submit_button"
+                        value="back_to_games"
+                        class="btn btn-lg btn-success"
+                        style="margin-top:100px">
+                    Back to Games
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock content %}

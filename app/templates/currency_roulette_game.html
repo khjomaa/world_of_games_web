@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="game">
+    <div id="game">
+        <h1>World Of Games</h1>
+    </div>
+</div>
+
+<hr>
+
+<div class="welcome_message">
+    <div id="welcome_message">
+        <h2>{{ title }}</h2>
+    </div>
+</div>
+
+<div class="center_form">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <fieldset class="form-group">
+            <div class="form-group">
+                {{ form.number.label(class="form-control-label") }} {{ difficulty }}$ in ILS
+
+                {% if form.number.errors %}
+                {{ form.number(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.number.errors %}
+                    <span id="error-color">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.number(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-lg btn-success") }}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
