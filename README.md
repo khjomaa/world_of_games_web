@@ -19,8 +19,19 @@
         - ```set DB_PASSWORD=user123```
         - ```set DB_HOST=localhost```
         - ```set DATABASE_NAME=wog```
-2. ```docker-compuse up -d```
-3. App URL: [0.0.0.0:8777](http://0.0.0.0:8777)
+4. ```pip install -r requirements.txt```
+5. ```python manage.py db init```
+6. ```python manage.py db migrate```
+7. ```python manage.py db upgrade```
+8. ```python manage.py runserver```
+6. App URL: [0.0.0.0:5555](http://0.0.0.0:5555)
+
+
+### How to run locally using Docker-Compose:
+1. ```git clone https://github.com/khjomaa/world_of_games_web.git```
+2. ```cd world_of_games_web```
+3. ```docker-compose up -d```
+4. App URL: [0.0.0.0:8777](http://0.0.0.0:8777)
 
 
 ### How To run in Jenkins:
