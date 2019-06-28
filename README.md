@@ -24,7 +24,7 @@
 6. ```python manage.py db migrate```
 7. ```python manage.py db upgrade```
 8. ```python manage.py runserver```
-6. App URL: [0.0.0.0:5555](http://0.0.0.0:5555)
+6. App URL: [0.0.0.0:5000](http://0.0.0.0:5000)
 
 
 ### How to run locally using Docker-Compose:
